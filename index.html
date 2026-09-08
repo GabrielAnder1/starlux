@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARLUX | Tienda de Ropa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        ENVÍO GRATIS EN PEDIDOS MAYORES A $25
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">STARLUX</a>
+            
+            <div class="nav-right">
+                <div class="nav-icons">
+                    <div class="nav-icon-btn" id="cartIcon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="icon-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Panel de Carrito -->
+    <div class="panel-overlay" id="panelOverlay"></div>
+    
+    <div class="side-panel" id="cartPanel">
+        <div class="panel-header">
+            <h3><i class="fas fa-shopping-bag"></i> Mi Carrito</h3>
+            <button class="panel-close" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="panel-body" id="cartBody">
+            <div class="empty-panel" id="emptyCart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Tu carrito está vacío</p>
+            </div>
+            <div class="panel-items" id="cartItems"></div>
+        </div>
+        <div class="panel-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-full" id="btnCheckout">SOLICITAR COMPRA</button>
+        </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>VISTE CON CONFIANZA, VISTE A LA MODA</h1>
+            <p>Un estilo único y a la moda para ti, solo en STARLUX. Somos lo que necesitas para verte y sentirte mejor.</p>
+            <div class="hero-buttons">
+                <a href="#productsSection" class="btn btn-primary" id="btnProducts">Ver Productos</a>
+                <a href="#carouselSection" class="btn btn-secondary" id="btnGallery">Ver Galería</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=900&fit=crop" alt="Modelos STARLUX">
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <div class="features-bar">
+        <div class="feature">
+            <i class="fas fa-shipping-fast"></i>
+            <div class="feature-text">
+                <strong>ENVÍO GRATIS</strong>
+                <span>En pedidos mayores a $25</span>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="fas fa-lock"></i>
+            <div class="feature-text">
+                <strong>PAGO SEGURO</strong>
+                <span>Checkout 100% seguro</span>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="fas fa-store"></i>
+            <div class="feature-text">
+                <strong>TIENDA FISICA</strong>
+                <span>Maturín, Los Guaritos</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel Automático 1 -->
+    <section class="auto-carousel" id="carouselSection">
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop" alt="Modelo 1">
+                <div class="carousel-overlay"><h3>Colección Primavera</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1529139574466-a302c27e3844?w=400&h=600&fit=crop" alt="Modelo 2">
+                <div class="carousel-overlay"><h3>Estilo Urbano</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=600&fit=crop" alt="Modelo 3">
+                <div class="carousel-overlay"><h3>Elegancia Casual</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=600&fit=crop" alt="Modelo 4">
+                <div class="carousel-overlay"><h3>Nueva Temporada</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=600&fit=crop" alt="Modelo 5">
+                <div class="carousel-overlay"><h3>Look Nocturno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=600&fit=crop" alt="Modelo 6">
+                <div class="carousel-overlay"><h3>Tendencia 2024</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=600&fit=crop" alt="Modelo 7">
+                <div class="carousel-overlay"><h3>Moda Masculina</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=600&fit=crop" alt="Modelo 8">
+                <div class="carousel-overlay"><h3>Street Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=600&fit=crop" alt="Modelo 9">
+                <div class="carousel-overlay"><h3>Chic Moderno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop" alt="Modelo 10">
+                <div class="carousel-overlay"><h3>Alta Costura</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=600&fit=crop" alt="Modelo 11">
+                <div class="carousel-overlay"><h3>Estilo Bohemio</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=400&h=600&fit=crop" alt="Modelo 12">
+                <div class="carousel-overlay"><h3>Casual Friday</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=400&h=600&fit=crop" alt="Modelo 13">
+                <div class="carousel-overlay"><h3>Urban Vibes</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop" alt="Modelo 14">
+                <div class="carousel-overlay"><h3>Minimal Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=600&fit=crop" alt="Modelo 15">
+                <div class="carousel-overlay"><h3>Editorial Look</h3></div>
+            </div>
+            <!-- Duplicados para loop infinito -->
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop" alt="Modelo 1">
+                <div class="carousel-overlay"><h3>Colección Primavera</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1529139574466-a302c27e3844?w=400&h=600&fit=crop" alt="Modelo 2">
+                <div class="carousel-overlay"><h3>Estilo Urbano</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=600&fit=crop" alt="Modelo 3">
+                <div class="carousel-overlay"><h3>Elegancia Casual</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=600&fit=crop" alt="Modelo 4">
+                <div class="carousel-overlay"><h3>Nueva Temporada</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=600&fit=crop" alt="Modelo 5">
+                <div class="carousel-overlay"><h3>Look Nocturno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=600&fit=crop" alt="Modelo 6">
+                <div class="carousel-overlay"><h3>Tendencia 2024</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=600&fit=crop" alt="Modelo 7">
+                <div class="carousel-overlay"><h3>Moda Masculina</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=600&fit=crop" alt="Modelo 8">
+                <div class="carousel-overlay"><h3>Street Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=600&fit=crop" alt="Modelo 9">
+                <div class="carousel-overlay"><h3>Chic Moderno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop" alt="Modelo 10">
+                <div class="carousel-overlay"><h3>Alta Costura</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=600&fit=crop" alt="Modelo 11">
+                <div class="carousel-overlay"><h3>Estilo Bohemio</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=400&h=600&fit=crop" alt="Modelo 12">
+                <div class="carousel-overlay"><h3>Casual Friday</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=400&h=600&fit=crop" alt="Modelo 13">
+                <div class="carousel-overlay"><h3>Urban Vibes</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop" alt="Modelo 14">
+                <div class="carousel-overlay"><h3>Minimal Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=600&fit=crop" alt="Modelo 15">
+                <div class="carousel-overlay"><h3>Editorial Look</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel Automático 2 (dirección contraria) -->
+    <section class="auto-carousel auto-carousel-reverse">
+        <div class="carousel-container carousel-container-reverse">
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=600&fit=crop" alt="Modelo 15">
+                <div class="carousel-overlay"><h3>Editorial Look</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop" alt="Modelo 14">
+                <div class="carousel-overlay"><h3>Minimal Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=400&h=600&fit=crop" alt="Modelo 13">
+                <div class="carousel-overlay"><h3>Urban Vibes</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=400&h=600&fit=crop" alt="Modelo 12">
+                <div class="carousel-overlay"><h3>Casual Friday</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=600&fit=crop" alt="Modelo 11">
+                <div class="carousel-overlay"><h3>Estilo Bohemio</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop" alt="Modelo 10">
+                <div class="carousel-overlay"><h3>Alta Costura</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=600&fit=crop" alt="Modelo 9">
+                <div class="carousel-overlay"><h3>Chic Moderno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=600&fit=crop" alt="Modelo 8">
+                <div class="carousel-overlay"><h3>Street Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=600&fit=crop" alt="Modelo 7">
+                <div class="carousel-overlay"><h3>Moda Masculina</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=600&fit=crop" alt="Modelo 6">
+                <div class="carousel-overlay"><h3>Tendencia 2024</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=600&fit=crop" alt="Modelo 5">
+                <div class="carousel-overlay"><h3>Look Nocturno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=600&fit=crop" alt="Modelo 4">
+                <div class="carousel-overlay"><h3>Nueva Temporada</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=600&fit=crop" alt="Modelo 3">
+                <div class="carousel-overlay"><h3>Elegancia Casual</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1529139574466-a302c27e3844?w=400&h=600&fit=crop" alt="Modelo 2">
+                <div class="carousel-overlay"><h3>Estilo Urbano</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop" alt="Modelo 1">
+                <div class="carousel-overlay"><h3>Colección Primavera</h3></div>
+            </div>
+            <!-- Duplicados para loop infinito -->
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=600&fit=crop" alt="Modelo 15">
+                <div class="carousel-overlay"><h3>Editorial Look</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop" alt="Modelo 14">
+                <div class="carousel-overlay"><h3>Minimal Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=400&h=600&fit=crop" alt="Modelo 13">
+                <div class="carousel-overlay"><h3>Urban Vibes</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=400&h=600&fit=crop" alt="Modelo 12">
+                <div class="carousel-overlay"><h3>Casual Friday</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=600&fit=crop" alt="Modelo 11">
+                <div class="carousel-overlay"><h3>Estilo Bohemio</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop" alt="Modelo 10">
+                <div class="carousel-overlay"><h3>Alta Costura</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=600&fit=crop" alt="Modelo 9">
+                <div class="carousel-overlay"><h3>Chic Moderno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=600&fit=crop" alt="Modelo 8">
+                <div class="carousel-overlay"><h3>Street Style</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=600&fit=crop" alt="Modelo 7">
+                <div class="carousel-overlay"><h3>Moda Masculina</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=600&fit=crop" alt="Modelo 6">
+                <div class="carousel-overlay"><h3>Tendencia 2024</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=600&fit=crop" alt="Modelo 5">
+                <div class="carousel-overlay"><h3>Look Nocturno</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=600&fit=crop" alt="Modelo 4">
+                <div class="carousel-overlay"><h3>Nueva Temporada</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=600&fit=crop" alt="Modelo 3">
+                <div class="carousel-overlay"><h3>Elegancia Casual</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1529139574466-a302c27e3844?w=400&h=600&fit=crop" alt="Modelo 2">
+                <div class="carousel-overlay"><h3>Estilo Urbano</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop" alt="Modelo 1">
+                <div class="carousel-overlay"><h3>Colección Primavera</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="categories-section" id="categoriesSection">
+        <div class="section-header">
+            <div>
+                <h2>BUSCA POR CATEGORÍA <span>Encuentra más fácil lo que buscas</span></h2>
+            </div>
+        </div>
+        
+        <div class="categories-scroll">
+            <button class="scroll-btn" onclick="scrollCategories('left')">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="categories-wrapper">
+                <div class="categories-list" id="categoriesList">
+                    <div class="category-item active" data-category="todos" onclick="filterProducts('todos')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=300&h=300&fit=crop" alt="Todos">
+                        </div>
+                        <span class="category-name">Todos</span>
+                    </div>
+                    <div class="category-item" data-category="tops" onclick="filterProducts('tops')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=300&fit=crop" alt="Tops">
+                        </div>
+                        <span class="category-name">Tops</span>
+                    </div>
+                    <div class="category-item" data-category="pantalones" onclick="filterProducts('pantalones')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300&h=300&fit=crop" alt="Pantalones">
+                        </div>
+                        <span class="category-name">Pantalones</span>
+                    </div>
+                    <div class="category-item" data-category="vestidos" onclick="filterProducts('vestidos')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&h=300&fit=crop" alt="Vestidos">
+                        </div>
+                        <span class="category-name">Vestidos</span>
+                    </div>
+                    <div class="category-item" data-category="zapatos" onclick="filterProducts('zapatos')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=300&fit=crop" alt="Zapatos">
+                        </div>
+                        <span class="category-name">Zapatos</span>
+                    </div>
+                    <div class="category-item" data-category="accesorios" onclick="filterProducts('accesorios')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300&h=300&fit=crop" alt="Accesorios">
+                        </div>
+                        <span class="category-name">Accesorios</span>
+                    </div>
+                    <div class="category-item" data-category="hombre" onclick="filterProducts('hombre')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=300&h=300&fit=crop" alt="Hombre">
+                        </div>
+                        <span class="category-name">Hombre</span>
+                    </div>
+                    <div class="category-item" data-category="sale" onclick="filterProducts('sale')">
+                        <div class="category-circle">
+                            <img src="https://images.unsplash.com/photo-1551488852-0801751ac367?w=300&h=300&fit=crop" alt="Sale">
+                        </div>
+                        <span class="category-name">Sale</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="scroll-btn" onclick="scrollCategories('right')">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="products-section" id="productsSection">
+        <div class="products-grid" id="productsGrid">
+            <div class="product-card" data-category="tops" data-id="1" data-title="Blusa Elegante Beige" data-price="29.90" data-image="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=550&fit=crop" data-available="true">
+                <div class="product-header">
+                    <h3 class="product-title">Blusa Elegante Beige</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=550&fit=crop" alt="Producto 1">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$29.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span>(4.5)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #f5f5dc;"></div>
+                    <div class="color-dot" style="background-color: #000;"></div>
+                    <div class="color-dot" style="background-color: #fff;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="pantalones" data-id="2" data-title="Jeans Wide Leg" data-price="49.90" data-image="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=550&fit=crop" data-available="true">
+                <div class="product-header">
+                    <h3 class="product-title">Jeans Wide Leg</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=550&fit=crop" alt="Producto 2">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$49.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span>(5.0)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #4682b4;"></div>
+                    <div class="color-dot" style="background-color: #000;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="vestidos" data-id="3" data-title="Vestido Midi Negro" data-price="34.90" data-image="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=550&fit=crop" data-available="true">
+                <div class="product-header">
+                    <h3 class="product-title">Vestido Midi Negro</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=550&fit=crop" alt="Producto 3">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$34.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                    <span>(4.0)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #000;"></div>
+                    <div class="color-dot" style="background-color: #8b0000;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tops" data-id="4" data-title="Suéter Oversized" data-price="39.90" data-image="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=550&fit=crop" data-available="false">
+                <div class="product-header">
+                    <h3 class="product-title">Suéter Oversized</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=550&fit=crop" alt="Producto 4">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability out-of-stock">Agotado</span>
+                    <span class="product-price">$39.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span>(4.7)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #2f4f4f;"></div>
+                    <div class="color-dot" style="background-color: #f5f5dc;"></div>
+                    <div class="color-dot" style="background-color: #000;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="zapatos" data-id="5" data-title="Sneakers Clásicos" data-price="59.90" data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=550&fit=crop" data-available="true">
+                <div class="product-header">
+                    <h3 class="product-title">Sneakers Clásicos</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=550&fit=crop" alt="Producto 5">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$59.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span>(4.9)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #fff;"></div>
+                    <div class="color-dot" style="background-color: #000;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accesorios" data-id="6" data-title="Bolso de Cuero" data-price="79.90" data-image="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=550&fit=crop" data-available="true">
+                <div class="product-header">
+                    <h3 class="product-title">Bolso de Cuero</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=550&fit=crop" alt="Producto 6">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$79.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span>(4.6)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #8b4513;"></div>
+                    <div class="color-dot" style="background-color: #000;"></div>
+                    <div class="color-dot" style="background-color: #f5deb3;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="hombre" data-id="7" data-title="Chaqueta Casual" data-price="89.90" data-image="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=400&h=550&fit=crop" data-available="true">
+                <div class="product-header">
+                    <h3 class="product-title">Chaqueta Casual</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=400&h=550&fit=crop" alt="Producto 7">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$89.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span>(4.8)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #2f4f4f;"></div>
+                    <div class="color-dot" style="background-color: #000;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="sale" data-id="8" data-title="Camisa Slim Fit" data-price="24.90" data-image="https://images.unsplash.com/photo-1551488852-0801751ac367?w=400&h=550&fit=crop" data-available="false">
+                <div class="product-header">
+                    <h3 class="product-title">Camisa Slim Fit</h3>
+                    <div class="product-wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551488852-0801751ac367?w=400&h=550&fit=crop" alt="Producto 8">
+                </div>
+                <div class="product-meta">
+                    <span class="product-availability out-of-stock">Agotado</span>
+                    <span class="product-price">$24.90</span>
+                </div>
+                <div class="product-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                    <span>(4.2)</span>
+                </div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #fff;"></div>
+                    <div class="color-dot" style="background-color: #87ceeb;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Estado del Pedido</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Métodos de Pago</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Sobre STARLUX</h3>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                    <li><a href="#">Sostenibilidad</a></li>
+                    <li><a href="#">Prensa</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Más de STARLUX</h3>
+                <ul>
+                    <li><a href="#">Tarjeta de Regalo</a></li>
+                    <li><a href="#">Programa de Fidelidad</a></li>
+                    <li><a href="#">Estudiantes 10% OFF</a></li>
+                    <li><a href="#">Tiendas Físicas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div>
+                <p>&copy; 2024 STARLUX. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
