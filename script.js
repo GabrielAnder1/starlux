@@ -115,7 +115,7 @@ function filterProducts(category) {
     
     products.forEach(product => {
         const productCategory = product.dataset.category;
-        if (category === 'todos' || productCategory === category) {
+        if (category === 'todas' || productCategory === category) {
             product.classList.remove('hidden');
             product.classList.add('fade-in');
             setTimeout(() => product.classList.remove('fade-in'), 500);
