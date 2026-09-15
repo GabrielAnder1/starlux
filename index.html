@@ -54,7 +54,7 @@
 
     <!-- Hero Banner con Botones Cristal Abajo -->
     <section class="hero-banner animate-fade-in">
-        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&h=900&fit=crop" alt="STARLUX Hero" class="hero-bg-image">
+        <img src="img/hero2.jpg" alt="STARLUX Hero" class="hero-bg-image">
         <div class="hero-content">
             <div class="hero-buttons">
                 <a href="#productsSection" class="btn btn-glass" id="btnProducts">Ver Productos</a>
@@ -147,37 +147,41 @@
             <button class="scroll-btn" onclick="scrollCategories('left')"><i class="fas fa-chevron-left"></i></button>
             <div class="categories-wrapper">
                 <div class="categories-list" id="categoriesList">
-                    <div class="category-item active" data-category="todos" onclick="filterProducts('todos')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=300&h=300&fit=crop" alt="Todos"></div>
-                        <span class="category-name">Todos</span>
+                    <div class="category-item active" data-category="todas" onclick="filterProducts('todas')">
+                        <div class="category-circle"><img src="img/all.webp" alt="Todas"></div>
+                        <span class="category-name">Todas</span>
+                    </div>
+                    <div class="category-item" data-category="boddys" onclick="filterProducts('bodys')">
+                        <div class="category-circle"><img src="img/bodys.webp" alt="Boddys"></div>
+                        <span class="category-name">Bodys</span>
+                    </div>
+                    <div class="category-item" data-category="camisas" onclick="filterProducts('camisas')">
+                        <div class="category-circle"><img src="img/camisas.webp" alt="Camisas"></div>
+                        <span class="category-name">Camisas</span>
+                    </div>
+                    <div class="category-item" data-category="chaquetas" onclick="filterProducts('chaquetas')">
+                        <div class="category-circle"><img src="img/chaquetas.webp" alt="Chaquetas"></div>
+                        <span class="category-name">Chaquetas</span>
+                    </div>
+                    <div class="category-item" data-category="falda" onclick="filterProducts('falda')">
+                        <div class="category-circle"><img src="img/falda.webp" alt="Falda"></div>
+                        <span class="category-name">Falda</span>
+                    </div>
+                    <div class="category-item" data-category="jean" onclick="filterProducts('jean')">
+                        <div class="category-circle"><img src="img/jeans.webp" alt="Jean"></div>
+                        <span class="category-name">Jean</span>
+                    </div>
+                    <div class="category-item" data-category="shorts" onclick="filterProducts('shorts')">
+                        <div class="category-circle"><img src="img/short.webp" alt="Shorts"></div>
+                        <span class="category-name">Shorts</span>
+                    </div>
+                    <div class="category-item" data-category="sueter" onclick="filterProducts('sueter')">
+                        <div class="category-circle"><img src="img/sueter.webp" alt="Suéter"></div>
+                        <span class="category-name">Suéter</span>
                     </div>
                     <div class="category-item" data-category="tops" onclick="filterProducts('tops')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=300&fit=crop" alt="Tops"></div>
+                        <div class="category-circle"><img src="img/top.webp" alt="Tops"></div>
                         <span class="category-name">Tops</span>
-                    </div>
-                    <div class="category-item" data-category="pantalones" onclick="filterProducts('pantalones')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300&h=300&fit=crop" alt="Pantalones"></div>
-                        <span class="category-name">Pantalones</span>
-                    </div>
-                    <div class="category-item" data-category="vestidos" onclick="filterProducts('vestidos')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&h=300&fit=crop" alt="Vestidos"></div>
-                        <span class="category-name">Vestidos</span>
-                    </div>
-                    <div class="category-item" data-category="zapatos" onclick="filterProducts('zapatos')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=300&fit=crop" alt="Zapatos"></div>
-                        <span class="category-name">Zapatos</span>
-                    </div>
-                    <div class="category-item" data-category="accesorios" onclick="filterProducts('accesorios')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300&h=300&fit=crop" alt="Accesorios"></div>
-                        <span class="category-name">Accesorios</span>
-                    </div>
-                    <div class="category-item" data-category="hombre" onclick="filterProducts('hombre')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=300&h=300&fit=crop" alt="Hombre"></div>
-                        <span class="category-name">Hombre</span>
-                    </div>
-                    <div class="category-item" data-category="sale" onclick="filterProducts('sale')">
-                        <div class="category-circle"><img src="https://images.unsplash.com/photo-1551488852-0801751ac367?w=300&h=300&fit=crop" alt="Sale"></div>
-                        <span class="category-name">Sale</span>
                     </div>
                 </div>
             </div>
@@ -198,105 +202,626 @@
         </div>
         
         <div class="products-grid" id="productsGrid">
-            <div class="product-card" data-category="tops" data-id="1" data-title="Blusa Elegante Beige" data-price="29.90" data-image="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=550&fit=crop" data-available="true" data-size="M">
+            <!-- Productos - Tops -->
+            <div class="product-card" data-category="tops" data-id="T1" data-title="Top Blanco Basic" data-price="9.00" data-image="img/top blanco basic.webp" data-available="true" data-size="S-M">
                 <div class="product-header">
-                    <h3 class="product-title">Blusa Elegante Beige</h3>
+                    <h3 class="product-title">Top Blanco Basic</h3>
                     <button class="product-add-btn">AÑADIR</button>
                 </div>
-                <div class="product-image"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=550&fit=crop" alt="Producto 1"></div>
+                <div class="product-image"><img src="img/top blanco basic.webp" alt="Top Blanco Basic"></div>
                 <div class="product-meta">
                     <span class="product-availability available">Disponible</span>
-                    <span class="product-price">$29.90</span>
+                    <span class="product-price">$9.00</span>
                 </div>
-                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span></div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span> <span class="size-value">M</span></div>
                 <div class="product-colors">
-                    <div class="color-dot" style="background-color: #f5f5dc;"></div>
-                    <div class="color-dot" style="background-color: #000;"></div>
+                    <div class="color-dot" style="background-color: #ffffff;"></div>
                 </div>
             </div>
 
-            <div class="product-card" data-category="pantalones" data-id="2" data-title="Jeans Wide Leg" data-price="49.90" data-image="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=550&fit=crop" data-available="true" data-size="38">
+            <div class="product-card" data-category="tops" data-id="T2" data-title="Top Blanco" data-price="9.00" data-image="img/top blanco.webp" data-available="true" data-size="UNICA">
                 <div class="product-header">
-                    <h3 class="product-title">Jeans Wide Leg</h3>
+                    <h3 class="product-title">Top Blanco</h3>
                     <button class="product-add-btn">AÑADIR</button>
                 </div>
-                <div class="product-image"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=550&fit=crop" alt="Producto 2"></div>
+                <div class="product-image"><img src="img/top blanco.webp" alt="Top Blanco"></div>
                 <div class="product-meta">
                     <span class="product-availability available">Disponible</span>
-                    <span class="product-price">$49.90</span>
+                    <span class="product-price">$9.00</span>
                 </div>
-                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">38</span></div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">UNICA</span></div>
                 <div class="product-colors">
-                    <div class="color-dot" style="background-color: #4682b4;"></div>
-                    <div class="color-dot" style="background-color: #000;"></div>
+                    <div class="color-dot" style="background-color: #ffffff;"></div>
                 </div>
             </div>
 
-            <div class="product-card" data-category="vestidos" data-id="3" data-title="Vestido Midi Negro" data-price="34.90" data-image="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=550&fit=crop" data-available="true" data-size="S">
+            <div class="product-card" data-category="tops" data-id="T3" data-title="Top Bordes Negros" data-price="9.00" data-image="img/top bordes negros.webp" data-available="true" data-size="S-M">
                 <div class="product-header">
-                    <h3 class="product-title">Vestido Midi Negro</h3>
+                    <h3 class="product-title">Top Bordes Negros</h3>
                     <button class="product-add-btn">AÑADIR</button>
                 </div>
-                <div class="product-image"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=550&fit=crop" alt="Producto 3"></div>
+                <div class="product-image"><img src="img/top bordes negros.webp" alt="Top Bordes Negros"></div>
                 <div class="product-meta">
                     <span class="product-availability available">Disponible</span>
-                    <span class="product-price">$34.90</span>
+                    <span class="product-price">$9.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #ffffff;"></div>
+                    <div class="color-dot" style="background-color: #000000;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tops" data-id="T4" data-title="Top Bordes Rosados" data-price="9.00" data-image="img/top bordes rosados.webp" data-available="true" data-size="S-M">
+                <div class="product-header">
+                    <h3 class="product-title">Top Bordes Rosados</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/top bordes rosados.webp" alt="Top Bordes Rosados"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$9.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #ffffff;"></div>
+                    <div class="color-dot" style="background-color: #f7d1dd;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tops" data-id="T5" data-title="Top Deportivo Gris" data-price="9.00" data-image="img/top deportivo gris.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Top Deportivo Gris</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/top deportivo gris.webp" alt="Top Deportivo Gris"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$9.00</span>
                 </div>
                 <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
                 <div class="product-colors">
-                    <div class="color-dot" style="background-color: #000;"></div>
-                    <div class="color-dot" style="background-color: #8b0000;"></div>
+                    <div class="color-dot" style="background-color: #838383;"></div>
                 </div>
             </div>
 
-            <div class="product-card" data-category="tops" data-id="4" data-title="Suéter Oversized" data-price="39.90" data-image="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=550&fit=crop" data-available="false" data-size="L">
+            <div class="product-card" data-category="tops" data-id="T6" data-title="Top Deportivo Verde" data-price="9.00" data-image="img/top deportivo verde.webp" data-available="true" data-size="S">
                 <div class="product-header">
-                    <h3 class="product-title">Suéter Oversized</h3>
+                    <h3 class="product-title">Top Deportivo Verde</h3>
                     <button class="product-add-btn">AÑADIR</button>
                 </div>
-                <div class="product-image"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=550&fit=crop" alt="Producto 4"></div>
-                <div class="product-meta">
-                    <span class="product-availability out-of-stock">Agotado</span>
-                    <span class="product-price">$39.90</span>
-                </div>
-                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">L</span></div>
-                <div class="product-colors">
-                    <div class="color-dot" style="background-color: #2f4f4f;"></div>
-                    <div class="color-dot" style="background-color: #f5f5dc;"></div>
-                </div>
-            </div>
-
-            <div class="product-card" data-category="zapatos" data-id="5" data-title="Sneakers Clásicos" data-price="59.90" data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=550&fit=crop" data-available="true" data-size="40">
-                <div class="product-header">
-                    <h3 class="product-title">Sneakers Clásicos</h3>
-                    <button class="product-add-btn">AÑADIR</button>
-                </div>
-                <div class="product-image"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=550&fit=crop" alt="Producto 5"></div>
+                <div class="product-image"><img src="img/top deportivo verde.webp" alt="Top Deportivo Verde"></div>
                 <div class="product-meta">
                     <span class="product-availability available">Disponible</span>
-                    <span class="product-price">$59.90</span>
+                    <span class="product-price">$9.00</span>
                 </div>
-                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">40</span></div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
                 <div class="product-colors">
-                    <div class="color-dot" style="background-color: #fff;"></div>
-                    <div class="color-dot" style="background-color: #000;"></div>
+                    <div class="color-dot" style="background-color: #395143;"></div>
                 </div>
             </div>
 
-            <div class="product-card" data-category="accesorios" data-id="6" data-title="Bolso de Cuero" data-price="79.90" data-image="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=550&fit=crop" data-available="true" data-size="Única">
+              <div class="product-card" data-category="tops" data-id="T7" data-title="Chaleco Beige" data-price="15.00" data-image="img/chaleco beige.webp" data-available="true" data-size="UNICA">
                 <div class="product-header">
-                    <h3 class="product-title">Bolso de Cuero</h3>
+                    <h3 class="product-title">Chaleco Beige</h3>
                     <button class="product-add-btn">AÑADIR</button>
                 </div>
-                <div class="product-image"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=550&fit=crop" alt="Producto 6"></div>
+                <div class="product-image"><img src="img/chaleco beige.webp" alt="Chaleco Beige"></div>
                 <div class="product-meta">
                     <span class="product-availability available">Disponible</span>
-                    <span class="product-price">$79.90</span>
+                    <span class="product-price">$15.00</span>
                 </div>
-                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">Única</span></div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">UNICA</span></div>
                 <div class="product-colors">
-                    <div class="color-dot" style="background-color: #8b4513;"></div>
-                    <div class="color-dot" style="background-color: #000;"></div>
+                    <div class="color-dot" style="background-color: #c6bfac;"></div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="tops" data-id="T8" data-title="Chaleco Negro" data-price="15.00" data-image="img/chaleco negro.webp" data-available="true" data-size="UNICA">
+                <div class="product-header">
+                    <h3 class="product-title">Chaleco Negro</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaleco negro.webp" alt="Chaleco Negro"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$15.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">UNICA</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #000000;"></div>
+                </div>
+            </div>
+
+            <!-- Productos Jeans -->
+            <div class="product-card" data-category="jean" data-id="J1" data-title="Jean Ancho Azul" data-price="18.00" data-image="img/jean ancho azul.webp" data-available="true" data-size="S-M">
+                <div class="product-header">
+                    <h3 class="product-title">Jean Ancho Azul</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jean ancho azul.webp" alt="Jean Ancho Azul"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$18.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #202636;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jean" data-id="J2" data-title="Jean Ancho Negro" data-price="18.00" data-image="img/jean ancho negro.webp" data-available="true" data-size="M">
+                <div class="product-header">
+                    <h3 class="product-title">Jean Ancho Negro</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jean ancho negro.webp" alt="Jean Ancho Negro"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$18.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #000000;"></div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="jean" data-id="J3" data-title="Jean Capri Azul" data-price="18.00" data-image="img/jean capri azul.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Jean Capri Azul</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jean capri azul.webp" alt="Jean Capri Azul"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$18.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #191c28;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jean" data-id="J4" data-title="Jean Capri" data-price="18.00" data-image="img/jean capri.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Jean Capri</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jean capri.webp" alt="Jean Capri"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$18.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #313b47;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jean" data-id="J5" data-title="Jean Con Averturas En Las Piernas" data-price="18.00" data-image="img/jean con averturas en las piernas.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Jean Con Averturas En Las Piernas</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jean con averturas en las piernas.webp" alt="Jean Con Averturas En Las Piernas"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$18.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #1a191e;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jean" data-id="J6" data-title="Jean De Un Bolsillo Gris" data-price="18.00" data-image="img/jean de un bolsillo gris.webp" data-available="true" data-size="S-M">
+                <div class="product-header">
+                    <h3 class="product-title">Jean De Un Bolsillo Gris</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jean de un bolsillo gris.webp" alt="Jean De Un Bolsillo Gris"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$18.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #616163;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jean" data-id="J7" data-title="Jean Desgastado" data-price="18.00" data-image="img/jean desgastado.webp" data-available="true" data-size="M-L">
+                <div class="product-header">
+                    <h3 class="product-title">Jean Desgastado</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jean desgastado.webp" alt="Jean Desgastado"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$18.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span> <span class="size-value">L</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #303030;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jean" data-id="J8" data-title="Conjuto Beige" data-price="20.00" data-image="img/conjuto beige.webp" data-available="true" data-size="M">
+                <div class="product-header">
+                    <h3 class="product-title">Conjuto Beige</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/conjuto beige.webp" alt="Conjuto Beige"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$20.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #b49e86;"></div>
+                </div>
+            </div>
+
+            <!-- Productos Faldas -->
+            <div class="product-card" data-category="falda" data-id="F1" data-title="Falda Globo" data-price="15.00" data-image="img/falda globo.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Falda Globo</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/falda globo.webp" alt="Falda Globo"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$15.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #e6e6e6;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="falda" data-id="F2" data-title="Falda Blanca" data-price="10.00" data-image="img/Falda Blanca.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Falda Blanca</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/Falda Blanca.webp" alt="Falda Blanca"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$10.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #e1ddd1;"></div>
+                </div>
+            </div>
+
+             <div class="product-card" data-category="falda" data-id="F3" data-title="Falda Con Encaje Blanca" data-price="10.00" data-image="img/Falda Con Encaje Blanca.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Falda Con Encaje Blanca</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/Falda Con Encaje Blanca.webp" alt="">Falda Con Encaje Blanca</div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$10.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #c9c9c7;"></div>
+                </div>
+            </div>
+
+             <div class="product-card" data-category="falda" data-id="F4" data-title="Falda De Cinturon Negra" data-price="10.00" data-image="img/Falda De Cinturon Negra.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Falda De Cinturon Negra</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/Falda De Cinturon Negra.webp" alt="">Falda De Cinturon Negra</div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$10.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #1f1f1f;"></div>
+                </div>
+            </div>
+
+            <!-- Productos Suéteres -->
+            <div class="product-card" data-category="sueter" data-id="S1" data-title="Sueter Depotivo" data-price="13.00" data-image="img/sueter depotivo.webp" data-available="true" data-size="M-L">
+                <div class="product-header">
+                    <h3 class="product-title">Sueter Depotivo</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/sueter depotivo.webp" alt="Sueter Depotivo"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$13.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span> <span class="size-value">L</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #ffffff;"></div>
+                </div>
+            </div>
+
+             <div class="product-card" data-category="sueter" data-id="S2" data-title="Sueter De Lazo Gris" data-price="13.00" data-image="img/sueter de lazo gris.webp" data-available="true" data-size="M-L">
+                <div class="product-header">
+                    <h3 class="product-title">Sueter De Lazo Gris</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/sueter de lazo gris.webp" alt="Sueter De Lazo Gris "></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$13.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span> <span class="size-value">L</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #959595;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="sueter" data-id="S3" data-title="Sueter De Letras Gris" data-price="13.00" data-image="img/sueter de letras gris.webp" data-available="true" data-size="M-L">
+                <div class="product-header">
+                    <h3 class="product-title">Sueter De Letras Gris</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/sueter de letras gris.webp" alt="Sueter De Letras Gris"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$13.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span> <span class="size-value">L</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #3f3c43;"></div>
+                </div>
+            </div>
+
+             <div class="product-card" data-category="sueter" data-id="S4" data-title="Sueter De Lazo Marron" data-price="13.00" data-image="img/sueter de letras gris.webp" data-available="true" data-size="M-L">
+                <div class="product-header">
+                    <h3 class="product-title">Sueter De Lazo Marron</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/Sueter De Lazo Marron.webp" alt="Sueter De Lazo Marron"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$13.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span> <span class="size-value">L</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #603f3b;"></div>
+                </div>
+            </div>
+
+            <!-- Productos Camisas -->
+            <div class="product-card" data-category="camisas" data-id="C1" data-title="Camisa Oversize Negra" data-price="13.00" data-image="img/camisa oversize negra.webp" data-available="true" data-size="M">
+                <div class="product-header">
+                    <h3 class="product-title">Camisa Oversize Negra</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/camisa oversize negra.webp" alt="Camisa Oversize Negra"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$13.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #000000;"></div>
+                </div>
+            </div>
+
+            <!-- Productos Chaquetas -->
+            <div class="product-card" data-category="chaquetas" data-id="CH1" data-title="Chaqueta Cortaviento Negra" data-price="19.50" data-image="img/chaqueta cortaviento negra.webp" data-available="true" data-size="M-L">
+                <div class="product-header">
+                    <h3 class="product-title">Chaqueta Cortaviento Negra</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaqueta cortaviento negra.webp" alt="Chaqueta Cortaviento Negra"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$19.50</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span> <span class="size-value">L</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #000000;"></div>
+                </div>
+            </div>
+
+              <div class="product-card" data-category="chaquetas" data-id="CH2" data-title="Chaqueta Cortaviento Rosada" data-price="19.50" data-image="img/chaqueta cortaviento rosada.webp" data-available="true" data-size="M-L">
+                <div class="product-header">
+                    <h3 class="product-title">Chaqueta Cortaviento Rosada</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaqueta cortaviento rosada.webp" alt="Chaqueta Cortaviento Rosada"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$19.50</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">M</span> <span class="size-value">L</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #d85888;"></div>
+                </div>
+            </div>
+
+              <div class="product-card" data-category="chaquetas" data-id="CH3" data-title="Chaquetas High School Azul A" data-price="26.00" data-image="img/chaquetas high school azul A.webp" data-available="true" data-size="L-XL">
+                <div class="product-header">
+                    <h3 class="product-title">Chaquetas High School Azul A</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaquetas high school azul A.webp" alt="Chaquetas High School Azul A"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$26.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">L</span> <span class="size-value">XL</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #173682;"></div>
+                    <div class="color-dot" style="background-color: #9f8d7b;"></div>
+                </div>
+            </div>
+
+              <div class="product-card" data-category="chaquetas" data-id="CH4" data-title="Chaquetas High School Azul NO CK" data-price="26.00" data-image="img/chaquetas high school azul no ck.webp" data-available="true" data-size="L-XL">
+                <div class="product-header">
+                    <h3 class="product-title">Chaquetas High School Azul NO CK</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaquetas high school azul no ck.webp" alt="Chaquetas High School Azul NO CK"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$26.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">L</span> <span class="size-value">XL</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #173682;"></div>
+                    <div class="color-dot" style="background-color: #9f8d7b;"></div>
+                </div>
+            </div>
+
+              <div class="product-card" data-category="chaquetas" data-id="CH5" data-title="Chaquetas High School Marron" data-price="26.00" data-image="img/chaquetas high school marron.webp" data-available="true" data-size="L-XL">
+                <div class="product-header">
+                    <h3 class="product-title">Chaquetas High School Marron</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaquetas high school marron.webp" alt="Chaquetas High School Marron"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$26.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">L</span> <span class="size-value">XL</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #816046;"></div>
+                    <div class="color-dot" style="background-color: #9f8d7b;"></div>
+                </div>
+            </div>
+
+              <div class="product-card" data-category="chaquetas" data-id="CH6" data-title="Chaquetas High School Roja A" data-price="26.00" data-image="img/chaquetas high school roja a.webp" data-available="true" data-size="L-XL">
+                <div class="product-header">
+                    <h3 class="product-title">Chaquetas High School Roja A</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaquetas high school roja a.webp" alt="Chaquetas High School Roja A"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$26.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">L</span> <span class="size-value">XL</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #7f1517;"></div>
+                    <div class="color-dot" style="background-color: #9f8d7b;"></div>
+                </div>
+            </div>
+
+              <div class="product-card" data-category="chaquetas" data-id="CH7" data-title="Chaquetas High School Roja D" data-price="26.00" data-image="img/chaquetas high school roja D.webp" data-available="true" data-size="L-XL">
+                <div class="product-header">
+                    <h3 class="product-title">Chaquetas High School Roja D</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/chaquetas high school roja D.webp" alt="Chaquetas High School Roja D"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$26.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">L</span> <span class="size-value">XL</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #7f1517;"></div>
+                    <div class="color-dot" style="background-color: #9f8d7b;"></div>
+                </div>
+            </div>
+
+              <div class="product-card" data-category="chaquetas" data-id="CH8" data-title="Jackets Negra" data-price="" data-image="img/jackets negra.webp" data-available="true" data-size="UNICA">
+                <div class="product-header">
+                    <h3 class="product-title">Jackets Negra</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/jackets negra.webp" alt="Jackets Negra"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value"></span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #000000;"></div>
+                </div>
+            </div>
+
+            <!-- Productos Shorts -->
+            <div class="product-card" data-category="shorts" data-id="SH1" data-title="Short Negro" data-price="10.00" data-image="img/short  negro.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Short Negro</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/short  negro.webp" alt="Short Negro"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$10.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #39393c;"></div>
+                </div>
+            </div>
+
+             <div class="product-card" data-category="shorts" data-id="SH2" data-title="Short Azul" data-price="10.00" data-image="img/short azul.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Short Azul</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/short azul.webp" alt="Short Azul"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$10.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #6d839b;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="shorts" data-id="SH3" data-title="Short Amarillo" data-price="10.00" data-image="img/Short Amarillo.webp" data-available="true" data-size="S">
+                <div class="product-header">
+                    <h3 class="product-title">Short Amarillo</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/Short Amarillo.webp" alt="Short Amarillo"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$10.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #c5af7f;"></div>
+                </div>
+            </div>
+
+            <!-- Productos Bodys -->
+            <div class="product-card" data-category="bodys" data-id="B1" data-title="Body Faja Beige" data-price="15.00" data-image="img/boddy faja beige.webp" data-available="true" data-size="S-M">
+                <div class="product-header">
+                    <h3 class="product-title">Body Faja Beige</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/boddy faja beige.webp" alt="Body Faja Beige"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$15.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #d3c3ad;"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bodys" data-id="B2" data-title="Body Marron" data-price="15.00" data-image="img/boddy marron.webp" data-available="true" data-size="S-M">
+                <div class="product-header">
+                    <h3 class="product-title">Body Marron</h3>
+                    <button class="product-add-btn">AÑADIR</button>
+                </div>
+                <div class="product-image"><img src="img/boddy marron.webp" alt="Body Marron"></div>
+                <div class="product-meta">
+                    <span class="product-availability available">Disponible</span>
+                    <span class="product-price">$15.00</span>
+                </div>
+                <div class="product-size"><span class="size-label">Talla:</span> <span class="size-value">S</span> <span class="size-value">M</span></div>
+                <div class="product-colors">
+                    <div class="color-dot" style="background-color: #a38772;"></div>
                 </div>
             </div>
         </div>
