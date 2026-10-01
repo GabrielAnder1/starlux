@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Archivos o carpetas a excluir (si los hubiera en el futuro)
-# Disallow: /admin/
-
 # Ubicación del mapa del sitio
-Sitemap: https://starlux.vercel.app/sitemap.xml
+Sitemap: https://starluxshop.vercel.app/sitemap.xml
