@@ -13,7 +13,6 @@ let heroInterval;
 // =========================================
 // 2. PARSER CSV CORREGIDO
 // =========================================
-// Parsea una línea CSV respetando comillas dobles
 function parseCSVLine(line) {
   const result = [];
   let current = '';
@@ -25,11 +24,9 @@ function parseCSVLine(line) {
     
     if (inQuotes) {
       if (char === '"' && nextChar === '"') {
-        // Comilla escapada dentro de comillas
         current += '"';
-        i++; // saltar la siguiente comilla
+        i++;
       } else if (char === '"') {
-        // Fin de comillas
         inQuotes = false;
       } else {
         current += char;
@@ -45,13 +42,11 @@ function parseCSVLine(line) {
       }
     }
   }
-  // Añadir el último campo
   result.push(current.trim());
   return result;
 }
 
 function parseCSV(text) {
-  // Normalizar saltos de línea
   const normalizedText = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
   const lines = normalizedText.split('\n').filter(line => line.trim() !== '');
   
@@ -72,7 +67,6 @@ function parseCSV(text) {
 }
 
 function mapProductData(row) {
-  // Acceso directo por nombre exacto de columna según el Google Sheet
   return {
     id: (row['id de producto'] || '').trim(),
     image: (row['url del producto'] || '').trim(),
@@ -93,7 +87,6 @@ async function loadProducts() {
     const text = await response.text();
     const rawData = parseCSV(text);
     
-    // Debug: mostrar primera fila en consola para verificar
     if (rawData.length > 0) {
       console.log('Primer producto parseado:', rawData[0]);
     }
@@ -180,7 +173,6 @@ function renderProducts(productList) {
     let btnText, btnClass, btnDisabled;
     
     if (!isAvailable) {
-      // Formatear estado con primera letra mayúscula
       btnText = product.status.charAt(0).toUpperCase() + product.status.slice(1);
       btnClass = 'neu-btn';
       btnDisabled = 'disabled';
@@ -329,6 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadProducts();
   updateCartUI();
 
+  // Eventos del carrito
   document.getElementById('cart-btn').addEventListener('click', openCart);
   document.getElementById('close-cart').addEventListener('click', closeCart);
   
@@ -351,5 +344,24 @@ document.addEventListener('DOMContentLoaded', () => {
     message += `%0ATotal: $${total.toFixed(2).replace('.', ',')}`;
     
     window.open(`https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${message}`, '_blank');
+  });
+
+  // Eventos de la Política de Privacidad
+  const privacyModal = document.getElementById('privacy-modal');
+  document.getElementById('privacy-btn').addEventListener('click', () => {
+    privacyModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+
+  document.getElementById('close-privacy').addEventListener('click', () => {
+    privacyModal.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  privacyModal.addEventListener('click', (e) => {
+    if (e.target.id === 'privacy-modal') {
+      privacyModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
   });
 });
