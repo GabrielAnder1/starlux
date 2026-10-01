@@ -620,3 +620,58 @@ body {
 #hero-img[src=""] {
   visibility: hidden;
 }
+
+/* Enlace de política en el footer */
+.privacy-link {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+  transition: var(--transition);
+}
+
+.privacy-link:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+/* Estilos específicos para el modal de privacidad */
+.privacy-content {
+  max-width: 600px; /* Un poco más ancho para leer mejor */
+  overflow-y: auto;
+}
+
+.privacy-text {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.privacy-text h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.privacy-text h4:first-child {
+  margin-top: 0;
+}
+
+.privacy-text p {
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+
+.privacy-text a {
+  color: var(--text-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
