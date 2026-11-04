@@ -364,4 +364,20 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
   });
+
+  // Lógica para ocultar/mostrar header al hacer scroll
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector('.header');
+  
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      header.classList.add('hidden');
+    } else {
+      header.classList.remove('hidden');
+    }
+    
+    lastScrollY = currentScrollY;
+  });
 });
